@@ -44,7 +44,7 @@ start
 		
 		
 		;---------------	Function that squares a number -----------------------------------
-		;		int square(int a) { return multiply(a, a); }}
+		;		int square(int a) { return multiply(a, a); }
 square
 		
 		;		Imagine for some reason this function needed to use r4 during its calculations
@@ -100,6 +100,7 @@ square
 		
 		;		Now we can fianlly return
 		mov		pc, lr
+		bx lr
 		
 		;		---------------- End of Square -------------------------
 		
@@ -126,7 +127,7 @@ loop
 		cmp		r2, #0			; Check if reached zero
 		beq		loop_done		; Exit loop if we have
 		add		r3, r3, r1		; Add x to result
-		sub		r2, r2, #1		; Decrement x
+		sub		r2, r2, #1		; Decrement copy of x
 		b		loop
 		
 loop_done

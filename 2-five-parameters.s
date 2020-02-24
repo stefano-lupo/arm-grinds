@@ -50,7 +50,7 @@ add5Numbers
 			ldmia	r13!, {r2}
 			add		r0, r0, r2
 			
-			mov		pc, lr					; I thinkt his can be done with bx lr in real ARM	
+			mov		pc, lr					; I thinkt his can be done with bx lr in real ARM
 			
 done
 			
